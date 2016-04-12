@@ -4,7 +4,7 @@ var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var hashHistory = ReactRouter.hashHistory;
 var IndexRoute = ReactRouter.IndexRoute;
-
+var ForecastContainer = require('../containers/ForecastContainer');
 var Main = require('../components/Main');
 var Home = require('../components/Home');
 
@@ -15,6 +15,7 @@ var routes =(
 
 		<Route path='/' component={Main} >
 				<IndexRoute component={Home} />
+				<Route path='forecast/:city'  component={ForecastContainer} />
 		</Route>
 					
 	</Router>

@@ -3,6 +3,11 @@ var axios = require('axios');
 var sec = 'cfd7b3a3acdd1fe9ba9081be87b459ca';
 
 
+function getCityData(city){
+
+	return axios.get('http://api.openweathermap.org/data/2.5/forecast/daily?q='+ city +'&type=accurate&APPID=' + sec + '&cnt=5');
+
+	}
 
 
 
@@ -16,6 +21,10 @@ var helpers = {
 
 	return axios.get('http://api.openweathermap.org/data/2.5/forecast/daily?q='+ city +'&type=accurate&APPID=' + sec + '&cnt=5');
 
+	},
+
+	getDailyForecast: function(days){
+		return axios.all()
 	}
 		
 };

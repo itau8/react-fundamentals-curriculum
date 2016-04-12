@@ -11,7 +11,6 @@ var Header = React.createClass({
 			<div style={styles.menu}>
 				<h2>Clever title</h2>
 				<Prompt styles={styles.menuprompt} classes='form-inline' btnsty={{margin:'10px'}} />
-
 			</div>
 		)
 	}
