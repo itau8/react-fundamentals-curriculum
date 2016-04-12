@@ -1,5 +1,7 @@
 var React = require('react');
 var styles = require('../styles');
+var weatherHelpers = require('../utils/weatherHelpers');
+
 var PropTypes = React.PropTypes;
 
 var Prompt =React.createClass({
@@ -35,7 +37,13 @@ var Prompt =React.createClass({
 	handleSubmit: function(e){
 		e.preventDefault();
 		var city = this.state.city;
-		console.log(city);
+
+		weatherHelpers.getCityInfoFive(city)
+		.then(function (response) {
+    		console.log(response);
+  		});
+
+		//console.log(weather);
 
 	},
 
